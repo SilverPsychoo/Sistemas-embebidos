@@ -1,0 +1,21 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="p16F877-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-64,-208" rotation="0" hflip="1" vflip="1" label="p16F877-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="20 MHz" Program="../../../../MPLABXProjects/blink_led.X/dist/default/production/blink_led.X.production.hex" Auto_Load="true" saveEepr="true" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Led" CircId="Led-3" mainComp="false" Show_id="false" Show_Val="false" Pos="32,-144" rotation="0" hflip="1" vflip="1" label="Led-3" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-4" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="88,-144" rotation="0" hflip="1" vflip="1" label="Resistor-4" idLabPos="-16,-24" labelrot="0" valLabPos="-18.319,8.70556" valLabRot="0" Resistance="220 Ω" />
+
+<item itemtype="Ground" CircId="Ground-6" mainComp="false" Show_id="false" Show_Val="false" Pos="128,-96" rotation="0" hflip="1" vflip="1" label="Ground-6" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-160,-200" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-7" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="p16F877-1-PORTB0" endpinid="Led-3-lPin" pointList="-8,-144,16,-144" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Resistor-4-lPin" endpinid="Led-3-rPin" pointList="72,-144,48,-144" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Ground-6-Gnd" endpinid="Resistor-4-rPin" pointList="128,-112,128,-144,104,-144" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="Fixed Voltage-7-outnod" endpinid="p16F877-1-MCLR" pointList="-144,-200,-72,-200" />
+
+</circuit>
