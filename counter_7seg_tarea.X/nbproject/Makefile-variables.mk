@@ -1,0 +1,10 @@
+#
+# Generated - do not edit!
+#
+# NOCDDL
+#
+CND_BASEDIR=`pwd`
+# default configuration
+CND_ARTIFACT_DIR_default=dist/default/production
+CND_ARTIFACT_NAME_default=counter_7seg_tarea.X.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/counter_7seg_tarea.X.production.hex
