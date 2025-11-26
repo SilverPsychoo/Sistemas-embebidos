@@ -1,0 +1,339 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"222 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"221
+[u S11 `S12 1 ]
+[n S11 . . ]
+"233
+[v _PORTBbits `VS11 ~T0 @X0 0 e@6 ]
+"340
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+[v F164 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v3.10\pic\include/builtins.h
+[v __delay `JF164 ~T0 @X0 0 e ]
+[p i __delay ]
+"1325 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"2229
+[v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
+"1159
+[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
+"2582
+[v _GO_nDONE `Vb ~T0 @X0 0 e@250 ]
+"1152
+[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
+"2222
+[v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
+[p mainexit ]
+"1499
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"1375
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"121 C:\Program Files\Microchip\xc8\v3.10\pic\include\c99/stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"54 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"218
+[; <" PORTB equ 06h ;# ">
+"280
+[; <" PORTC equ 07h ;# ">
+"342
+[; <" PORTD equ 08h ;# ">
+"404
+[; <" PORTE equ 09h ;# ">
+"436
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; <" T1CON equ 010h ;# ">
+"732
+[; <" TMR2 equ 011h ;# ">
+"739
+[; <" T2CON equ 012h ;# ">
+"810
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; <" SSPCON equ 014h ;# ">
+"887
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; <" TXREG equ 019h ;# ">
+"1068
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; <" TRISA equ 085h ;# ">
+"1377
+[; <" TRISB equ 086h ;# ">
+"1439
+[; <" TRISC equ 087h ;# ">
+"1501
+[; <" TRISD equ 088h ;# ">
+"1563
+[; <" TRISE equ 089h ;# ">
+"1620
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; <" PR2 equ 092h ;# ">
+"1825
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; <" EECON2 equ 018Dh ;# ">
+"21 LCD_tarea.c
+[v _lcdCommand `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _lcdCommand ]
+[v _cmd `uc ~T0 @X0 1 r1 ]
+[f ]
+"23
+[e = . . _PORTBbits 0 6 -> -> 0 `i `uc ]
+"24
+[e = _PORTD _cmd ]
+"25
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+"26
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"27
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"28
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"30
+[e :UE 102 ]
+}
+"32
+[v _lcd_init `(v ~T0 @X0 1 ef ]
+{
+[e :U _lcd_init ]
+[f ]
+"33
+[e ( _lcdCommand (1 -> -> 56 `i `uc ]
+"34
+[e ( _lcdCommand (1 -> -> 6 `i `uc ]
+"35
+[e ( _lcdCommand (1 -> -> 15 `i `uc ]
+"36
+[e ( _lcdCommand (1 -> -> 1 `i `uc ]
+"37
+[e ( _lcdCommand (1 -> -> 128 `i `uc ]
+"38
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"39
+[e :UE 103 ]
+}
+"41
+[v _lcdSendDataByte `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _lcdSendDataByte ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+"43
+[e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
+"44
+[e = _PORTD _data ]
+"45
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+"46
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"47
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"48
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"50
+[e :UE 104 ]
+}
+"52
+[v _adc_init `(v ~T0 @X0 1 ef ]
+{
+[e :U _adc_init ]
+[f ]
+"53
+[e = _TRISA -> -> 1 `i `uc ]
+"54
+[e = _ADCON1 -> -> 206 `i `uc ]
+"55
+[e = _ADCON0 -> -> 129 `i `uc ]
+"56
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+"58
+[e :UE 105 ]
+}
+"60
+[v _lcdSendString `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _lcdSendString ]
+[v _addr `*uc ~T0 @X0 1 r1 ]
+[f ]
+"61
+[e $U 107  ]
+[e :U 108 ]
+{
+"62
+[e ( _lcdSendDataByte (1 -> *U _addr `uc ]
+"63
+[e ++ _addr * -> -> 1 `i `x -> -> # *U _addr `i `x ]
+"64
+}
+[e :U 107 ]
+"61
+[e $ != -> *U _addr `i -> 0 `i 108  ]
+[e :U 109 ]
+"66
+[e :UE 106 ]
+}
+"68
+[v _adc_read_an0 `(ui ~T0 @X0 1 ef ]
+{
+[e :U _adc_read_an0 ]
+[f ]
+"69
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+"70
+[e = _GO_nDONE -> -> 1 `i `b ]
+"71
+[e $U 111  ]
+[e :U 112 ]
+[e :U 111 ]
+[e $ _GO_nDONE 112  ]
+[e :U 113 ]
+"72
+[e ) | << -> _ADRESH `ui -> 8 `i -> _ADRESL `ui ]
+[e $UE 110  ]
+"74
+[e :UE 110 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"75
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"77
+[e = _TRISD -> -> 0 `i `uc ]
+"78
+[e = _TRISB -> -> 0 `i `uc ]
+"80
+[e ( _lcd_init ..  ]
+"81
+[e ( _adc_init ..  ]
+"83
+[v _buffer `uc ~T0 @X0 -> 16 `i a ]
+"84
+[v _prev_mv `ui ~T0 @X0 1 a ]
+[e = _prev_mv -> -> 255 `i `ui ]
+"86
+[e :U 116 ]
+{
+"87
+[v _raw `us ~T0 @X0 1 a ]
+[e = _raw -> ( _adc_read_an0 ..  `us ]
+"88
+[v _mV `us ~T0 @X0 1 a ]
+[e = _mV -> / * -> _raw `l -> 5000 `l -> -> 1023 `ui `l `us ]
+"90
+[e $ ! != -> _mV `ui _prev_mv 118  ]
+{
+"91
+[e ( _lcdCommand (1 -> -> 128 `i `uc ]
+"92
+[e ( _sprintf (1 , (. , &U _buffer :s 1C -> _raw `ui ]
+"93
+[e ( _lcdSendString (1 &U _buffer ]
+"95
+[e ( _lcdCommand (1 -> -> 192 `i `uc ]
+"96
+[e ( _sprintf (1 , (. , &U _buffer :s 2C -> _mV `ui ]
+"97
+[e ( _lcdSendString (1 &U _buffer ]
+"99
+[e = _prev_mv -> _mV `ui ]
+"102
+}
+[e :U 118 ]
+"104
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"105
+}
+[e :U 115 ]
+[e $U 116  ]
+[e :U 117 ]
+"106
+[e $UE 114  ]
+"107
+[e :UE 114 ]
+}
+[p f _sprintf 8422400 ]
+[a 1C 114 97 119 58 37 52 117 0 ]
+[a 2C 109 86 58 37 52 117 0 ]
