@@ -1,55 +1,40 @@
-# Prerequisites
-*.d
+# --- MPLAB X build folders ---
+build/
+dist/
 
-# Object files
+# --- MPLAB X project private files ---
+nbproject/private/
+
+# Si quieres ignorar TODO el nbproject exceptuando config importantes
+nbproject/*
+!nbproject/Makefile-*
+!nbproject/configurations.xml
+
+# --- Archivos generados por compilación ---
 *.o
-*.ko
-*.obj
+*.d
 *.elf
-
-# Linker output
-*.ilk
+*.hex
 *.map
+*.s
+*.su
+*.dSYM/
+*.pdb
+*.obj
+*.a
+*.bin
+*.out
 *.exp
-
-# Precompiled Headers
 *.gch
 *.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# --- Otros generados o temporales ---
+*.log
+*.tmp
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# --- Editor / IDE basura ---
+.vscode/
+.idea/
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-# debug information files
-*.dwo
+# --- Python venv si alguna vez mezclas cosas ---
+*.venv
