@@ -13,25 +13,27 @@ unsigned char display[10] = {
 
 unsigned char counter = 0;
 
-
 void setup() {
-  DDRB = B00000000;
-  PORTB = B00000100;
-  DDRD = B11111111;
-  PORTD = display[0];
-
-
-  }
+  DDRB = B00000000;     // Todo PORTB como entrada
+  PORTB = B00000100;    // Pull-up en PB2
+  DDRD = B11111111;     // Todo PORTD como salida
+  PORTD = display[0];   // Mostrar 0 al inicio
+}
 
 void loop() {
-    if (PINB == B00000100) {
-      delay(80);
-      if (PINB == B00000100) {
-        counter++;
-        PORTD = display[counter];
-      }
-      if (counter == 10){
-        counter = 0;
-      }
+
+  // Detectar solo PB2, no todo el puerto
+  if (PINB & B00000100) {
+
+    delay(80);
+
+    if (PINB & B00000100) {
+      counter++;
+      PORTD = display[counter];
+    }
+
+    if (counter == 10) {
+      counter = 0;
+    }
   }
 }

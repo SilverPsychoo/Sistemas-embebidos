@@ -1,40 +1,36 @@
 #include <avr/io.h>
+#include <util/delay.h>
 
-void adc_init()
-{
-    ADMUX |= (1 << REFS0);       // Referencia AVcc
-    ADCSRA |= (1 << ADEN);       // Habilitar ADC
-    ADCSRA |= (1 << ADPS2) | (1 << ADPS1); // Prescaler 64
+//ADC0
+static inline void initADC0(void) {
+    ADMUX = (1 << REFS0);                 // Referencia: AVCC
+    ADCSRA = (1 << ADPS1) | (1 << ADPS0); // Prescaler /8
+    ADCSRA |= (1 << ADEN);                // Habilitar ADC
 }
 
-uint16_t adc_read()
-{
-    ADCSRA |= (1 << ADSC);            // Iniciar conversión
-    while (ADCSRA & (1 << ADSC));     // Esperar a que termine
-    return ADC;                       // Valor 0–1023
+//TIMER1 PWM OC1A (pin 9)
+void initPWM(void) {
+    DDRB |= (1 << PB1);
+
+    TCCR1A = (1 << COM1A1) | (1 << WGM10);
+    TCCR1B = (1 << WGM12) | (1 << CS11);  // Prescaler /8
 }
 
-int main(void)
-{
-    // --- PWM en Timer1 ---
-    DDRB |= (1 << DDB1); // PB1 (OC1A) salida, pin 9 Arduino
+int main(void) {
+    uint16_t pot;
 
-    ICR1 = 0xFFFF; // TOP = 16 bits
+    initADC0();
+    initPWM();
 
-    TCCR1A |= (1 << COM1A1); // PWM no-invertido
-    TCCR1A |= (1 << WGM11);
-    TCCR1B |= (1 << WGM12) | (1 << WGM13); // Fast PWM ICR1 como TOP
-    TCCR1B |= (1 << CS10); // Sin prescaler
+    while (1) {
+        ADCSRA |= (1 << ADSC);                     // Iniciar conversión
+        loop_until_bit_is_clear(ADCSRA, ADSC);     // Esperar ADC listo
+        pot = ADC;                                 // Rango 0–1023
 
-    // --- ADC ---
-    adc_init();
+        OCR1A = pot >> 2; // Escala a 0–255 para PWM
 
-    while (1)
-    {
-        uint16_t pot = adc_read();    // 0–1023
-
-        // Escalar pot → 0–65535 (16 bits)
-        uint32_t pwm = (uint32_t)pot * 65535UL / 1023UL;
-        OCR1A = pwm; // Actualizar PWM según pot
+        _delay_ms(10);
     }
+
+    return 0;
 }

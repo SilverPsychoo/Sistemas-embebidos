@@ -12,7 +12,6 @@
 #define RS PB0  // Pin 8 Arduino
 #define EN PB1  // Pin 9 Arduino
 
-// Prototipos de funciones
 void lcdCommand(unsigned char cmd);
 void lcd_init(void);
 void lcdSendDataByte(unsigned char data);
@@ -63,25 +62,27 @@ void lcdSendString(char *addr) {
 }
 
 void adc_init(void) {
-    // Configurar ADC
-    ADMUX = (1 << REFS0);  // Referencia AVcc (5V)
-    ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0); 
-    // ADC habilitado, prescaler 128 (16MHz/128 = 125kHz)
+    // Referencia AVcc
+    ADMUX = (1 << REFS0);
+
+    // Habilitar ADC + prescaler 128
+    ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
 }
 
+
 uint16_t adc_read_channel(uint8_t channel) {
-    // Seleccionar canal (0-5)
+    // Mantener referencia, limpiar solo MUX bits
     ADMUX = (ADMUX & 0xF0) | (channel & 0x0F);
-    
+
     // Iniciar conversión
     ADCSRA |= (1 << ADSC);
-    
-    // Esperar a que termine la conversión
+
+    // Esperar fin de conversión
     while (ADCSRA & (1 << ADSC));
-    
-    // Leer resultado (10 bits)
+
     return ADC;
 }
+
 
 int main(void) {
     char buffer[16];
