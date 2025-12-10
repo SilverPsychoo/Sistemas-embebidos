@@ -21,17 +21,12 @@ void setup() {
 }
 
 void loop() {
-
-  // Detectar solo PB2, no todo el puerto
   if (PINB & B00000100) {
-
     delay(80);
-
     if (PINB & B00000100) {
       counter++;
       PORTD = display[counter];
     }
-
     if (counter == 10) {
       counter = 0;
     }
